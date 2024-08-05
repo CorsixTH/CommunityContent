@@ -36,7 +36,7 @@
 |---------------------------|----------------------------------------------------------------|
 | Linux / macOS             | `${XDG_CONFIG_HOME}/CorsixTH/` or `~/.config/CorsixTH/`        |
 | Linux (Flatpak)           | `~/.var/app/com.corsixth.corsixth/config/CorsixTH/`            |
-| Linux (snap)              | `~/CorsixTH`                                                   |
+| Linux (snap)              | `~/snap/corsix-th/current/.config/CorsixTH/`                   |
 | Windows                   | `$(APPDATA)\CorsixTH\`                                         |
 | Windows (XP)              | `C:\Documents and Settings\$(User)\Application Data\CorsixTH\` |
 | Windows (Vista and above) | `C:\Users\$(User)\AppData\Roaming\CorsixTH\`                   |
