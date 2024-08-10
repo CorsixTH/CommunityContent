@@ -1,5 +1,7 @@
 # CorsixTH custom campaigns, levels and maps
 
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />All work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
 ## Directory
 
 ### Campaigns
@@ -40,5 +42,3 @@
 | Windows                   | `$(APPDATA)\CorsixTH\`                                         |
 | Windows (XP)              | `C:\Documents and Settings\$(User)\Application Data\CorsixTH\` |
 | Windows (Vista and above) | `C:\Users\$(User)\AppData\Roaming\CorsixTH\`                   |
-
-All work is licensed under the [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/)
