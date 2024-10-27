@@ -1,0 +1,249 @@
+HILLSIDE, HILLSIDE & DISTRICT, and OLD HILLSIDE is freely distributed under the following terms:
+Copyright (c) 2021-2024 Raven "Edgewurth" Penfold
+
+This work is licensed under a Creative Commons Attribution 4.0 International License - https://creativecommons.org/licenses/by/4.0/
+
+---------------------- General Information -------------------------
+%Name = "Old Hillside"
+%MapFile = "Hillside.map"
+
+%LevelBriefing = "OLD HILLSIDE
+
+The Ministry of Health has applauded you for your efforts. They wish for you to continue in the hospital at Hillside.
+
+Be prepared, since there is a population boom predicted. You should also watch out for earthquakes, and keep an eye on your employee's happiness and patient needs.
+
+Gain a reputation of at least 800, treat 90% of your visitors, cure 90 patients, get $150,000 in funds and have your hospital at $250,000 - and the Minister will consider giving up his hospital."
+
+%LevelDebriefing = "The Ministry of Health is impressed with your work done at Old Hillside."
+
+Town properties
+InterestRate is defined as centiprocent to allow for two decimals precision, i.e.
+300 means 3 %
+#town.StartCash.InterestRate 70000 1200
+
+-------------------- Disease Configuration -------------------------
+
+When a drug is researched, what effectiveness does it have
+#gbv.StartRating 80
+
+The following table contains all diagnoses and treatments that shows up in the drug casebook
+in the game. Known specifies whether it should show up from the beginning of the level and
+RschReqd how much research is required to discover the treatment room for the disease.
+#expertise[1].Known.RschReqd 1 0 GENERAL_PRACTICE
+#expertise[2].Known.RschReqd 1 40000 BLOATY_HEAD
+#expertise[3].Known.RschReqd 0 40000 HAIRYITUS
+#expertise[4].Known.RschReqd 0 60000 ELVIS
+#expertise[5].Known.RschReqd 0 60000 INVIS
+#expertise[6].Known.RschReqd 0 60000 RADIATION
+#expertise[7].Known.RschReqd 0 40000 SLACK_TONGUE
+#expertise[8].Known.RschReqd 0 60000 ALIEN
+#expertise[9].Known.RschReqd 0 20000 BROKEN_BONES
+#expertise[10].Known.RschReqd 0 40000 BALDNESS
+#expertise[11].Known.RschReqd 0 40000 DISCRETE_ITCHING
+#expertise[12].Known.RschReqd 0 40000 JELLYITUS
+#expertise[13].Known.RschReqd 0 40000 SLEEPING_ILLNESS
+#expertise[14].Known.RschReqd 0 30000 PREGNANT
+#expertise[15].Known.RschReqd 0 40000 TRANSPARENCY
+#expertise[16].Known.RschReqd 0 20000 UNCOMMON_COLD
+#expertise[17].Known.RschReqd 0 60000 BROKEN_WIND
+#expertise[18].Known.RschReqd 0 20000 SPARE_RIBS
+#expertise[19].Known.RschReqd 0 20000 KIDNEY_BEANS
+#expertise[20].Known.RschReqd 0 20000 BROKEN_HEART
+#expertise[21].Known.RschReqd 0 20000 RUPTURED_NODULES
+#expertise[22].Known.RschReqd 0 40000 MULTIPLE_TV_PERSONALITIES
+#expertise[23].Known.RschReqd 1 60000 INFECTIOUS_LAUGHTER
+#expertise[24].Known.RschReqd 0 40000 CORRUGATED_ANKLES
+#expertise[25].Known.RschReqd 0 40000 CHRONIC_NOSEHAIR
+#expertise[26].Known.RschReqd 0 40000 3RD_DEGREE_SIDEBURNS
+#expertise[27].Known.RschReqd 0 40000 FAKE_BLOOD
+#expertise[28].Known.RschReqd 0 40000 GASTRIC_EJECTIONS
+#expertise[29].Known.RschReqd 1 20000 THE_SQUITS
+#expertise[30].Known.RschReqd 0 20000 IRON_LUNGS
+#expertise[31].Known.RschReqd 0 40000 SWEATY_PALMS
+#expertise[32].Known.RschReqd 0 20000 HEAPED_PILES
+#expertise[33].Known.RschReqd 0 20000 GUT_ROT
+#expertise[34].Known.RschReqd 0 20000 GOLF_STONES
+#expertise[35].Known.RschReqd 0 20000 UNEXPECTED_SWELLING
+#expertise[36].Known.RschReqd 0 40000 I_D_SCANNER             DIAGNOSIS
+#expertise[37].Known.RschReqd 0 50000 I_D_BLOOD_MACHINE       DIAGNOSIS
+#expertise[38].Known.RschReqd 0 20000 I_D_CARDIO              DIAGNOSIS
+#expertise[39].Known.RschReqd 0 30000 I_D_XRAY                DIAGNOSIS
+#expertise[40].Known.RschReqd 0 60000 I_D_ULTRASCAN           DIAGNOSIS
+#expertise[41].Known.RschReqd 1 20000 I_D_STANDARD            DIAGNOSIS
+#expertise[42].Known.RschReqd 1 20000 I_D_WARD                DIAGNOSIS
+#expertise[43].Known.RschReqd 1 20000 I_D_SHRINK              DIAGNOSIS
+
+| Objects available | Available from the start | Strength | Available for this level | Comment
+#objects[9].StartAvail.StartStrength.AvailableForLevel 1 8 1 Inflator Machine
+#objects[13].StartAvail.StartStrength.AvailableForLevel 1 13 1 Cardiogram
+#objects[14].StartAvail.StartStrength.AvailableForLevel 0 12 1 Scanner
+#objects[22].StartAvail.StartStrength.AvailableForLevel 0 9 1 Ultrascan
+#objects[23].StartAvail.StartStrength.AvailableForLevel 0 7 1 DNA Restorer
+#objects[24].StartAvail.StartStrength.AvailableForLevel 0 11 1 Cast Remover
+#objects[25].StartAvail.StartStrength.AvailableForLevel 0 8 1 Hair restorer
+#objects[26].StartAvail.StartStrength.AvailableForLevel 0 10 1 Slicer for slack tongues
+#objects[27].StartAvail.StartStrength.AvailableForLevel 0 12 1 X-Ray
+#objects[30].StartAvail.StartStrength.AvailableForLevel 1 12 1 Operating Table
+#objects[37].StartAvail.StartStrength.AvailableForLevel 1 0 1 Projector
+#objects[40].StartAvail.StartStrength.AvailableForLevel	0 1 1 Research Computer
+#objects[41].StartAvail.StartStrength.AvailableForLevel	0 1 1 Chemical Mixer
+#objects[42].StartAvail.StartStrength.AvailableForLevel 0 10 1 Blood Machine
+#objects[46].StartAvail.StartStrength.AvailableForLevel 0 8 1 Electrolysis Machine
+#objects[47].StartAvail.StartStrength.AvailableForLevel 0 7 1 Jellyitus Moulding Machine
+#objects[54].StartAvail.StartStrength.AvailableForLevel 0 10 1 Decontamination Shower
+#objects[55].StartAvail.StartStrength.AvailableForLevel 1 10 1 Autopsy Research Machine
+#objects[57].StartAvail.StartStrength.AvailableForLevel 0 57 1 Video Game
+
+
+#visuals[0]  1 I_BLOATY_HEAD
+#visuals[1]  21 I_HAIRYITUS
+#visuals[2]  7 I_ELVIS
+#visuals[3]  9 I_INVIS
+#visuals[4]  23 I_RADIATION
+#visuals[5]  11 I_SLACK_TONGUE
+#visuals[6]  41 I_ALIEN
+#visuals[7]  11 I_BROKEN_BONES
+#visuals[8]  12 I_BALDNESS
+#visuals[9]  5 I_DISCRETE_ITCHING
+#visuals[10] 12 I_JELLYITUS
+#visuals[11] 1 I_SLEEPING_ILLNESS
+#visuals[12] 18 I_PREGNANT
+#visuals[13] 16 I_TRANSPARENCY
+#non_visuals[0] 1 I_UNCOMMON_COLD
+#non_visuals[1] 3 I_BROKEN_WIND
+#non_visuals[2] 19 I_SPARE_RIBS
+#non_visuals[3] 31 I_KIDNEY_BEANS
+#non_visuals[4] 25 I_BROKEN_HEART
+#non_visuals[5] 18 I_RUPTURED_NODULES
+#non_visuals[6] 1 I_MULTIPLE_TV_PERSONALITIES
+#non_visuals[7] 14 I_INFECTIOUS_LAUGHTER
+#non_visuals[8] 21 I_CORRUGATED_ANKLES
+#non_visuals[9] 15 I_CHRONIC_NOSEHAIR
+#non_visuals[10] 1 I_3RD_DEGREE_SIDEBURNS
+#non_visuals[11] 31 I_FAKE_BLOOD
+#non_visuals[12] 13 I_GASTRIC_EJECTIONS
+#non_visuals[13] 6 I_THE_SQUITS
+#non_visuals[14] 9 I_IRON_LUNGS
+#non_visuals[15] 9 I_SWEATY_PALMS
+#non_visuals[16] 15 I_HEAPED_PILES
+#non_visuals[17] 18 I_GUT_ROT
+#non_visuals[18] 7 I_GOLF_STONES
+#non_visuals[19] 5 I_UNEXPECTED_SWELLING
+
+
+---------------------- Staff Configuration -------------------------
+
+Each entry states how many staff members of each category are available
+a given month. The number of entries is not fixed.
+| A list | Month it gets active (start at 0) | Each group |
+#staff_levels[0].Month.Nurses.Doctors.Handymen.Receptionists 0 12 12 6 4
+#staff_levels[1].Month.Nurses.Doctors.Handymen.Receptionists 4 6 6 3 2
+#staff_levels[2].Month.Nurses.Doctors.Handymen.Receptionists 8 3 3 2 2
+#staff_levels[2].Month.Nurses.Doctors.Handymen.Receptionists 12 2 2 2 2
+
+The minimum salary for each staff type
+#staff[0].MinSalary 50 Nurse
+#staff[1].MinSalary 65 Doctor
+#staff[2].MinSalary 15 Handyman
+#staff[3].MinSalary 10 Receptionist
+
+Salary modifiers for different doctor attributes
+#gbv.SalaryAdd[3] -20 Junior
+#gbv.SalaryAdd[4] 20 Doctor
+#gbv.SalaryAdd[5] 30 Surgeon
+#gbv.SalaryAdd[6] 40 Psychiatrist
+#gbv.SalaryAdd[7] 110 Consultant
+#gbv.SalaryAdd[8] 20 Researcher
+
+How much the skill of the doctor adds to the salary. skill * 1000 / divisor
+#gbv.SalaryAbilityDivisor 10
+#gbv.LandCostPerTile 75
+
+#gbv.TrainingRate         40
+#gbv.AbilityThreshold[0]  75 Surgeon
+#gbv.AbilityThreshold[1]  60 Psychiatrist
+#gbv.AbilityThreshold[2]  45 Researcher
+#gbv.TrainingValue[0]     10 Projector
+#gbv.TrainingValue[1]     15 Skeleton
+#gbv.TrainingValue[2]     20 Bookcase
+
+#popn[0].Month.Change		0		2
+#popn[1].Month.Change		3		0
+#popn[2].Month.Change		18		20
+#popn[3].Month.Change		21		20
+#popn[4].Month.Change		22		-10
+#popn[5].Month.Change		30		30
+#popn[6].Month.Change		33		-30
+#popn[7].Month.Change		34		0
+#popn[8].Month.Change		42		25
+#popn[9].Month.Change		45		-5
+#popn[10].Month.Change		46		0
+#popn[11].Month.Change		54		16
+#popn[12].Month.Change		57		-10
+#popn[13].Month.Change		58		30
+#popn[14].Month.Change		66		30
+#popn[15].Month.Change		69		-60
+#popn[16].Month.Change		70		0
+#popn[17].Month.Change		78		20
+#popn[18].Month.Change		81		-10
+#popn[19].Month.Change		82		20
+#popn[20].Month.Change		90		5
+#popn[21].Month.Change		93		10
+#popn[22].Month.Change		94		-80
+#popn[23].Month.Change		102		10
+#popn[24].Month.Change		105		20
+#popn[25].Month.Change		106		30
+#popn[26].Month.Change		114		40
+#popn[27].Month.Change		117		-40
+#popn[28].Month.Change		118		0
+
+#emergency_control[0].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus		2	8	2	10	2	75	1500
+#emergency_control[1].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus		4	10	4	12	4	75	2000
+#emergency_control[2].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus		6	12	4	12	5	75	2500
+#emergency_control[3].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus		8	14	4	14	7	75	3000
+#emergency_control[4].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus		10	16	4	14	14	75	3500
+#emergency_control[5].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus		12	18	6	16	2	75	3500
+#emergency_control[6].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus		14	20	6	16	4	75	3500
+#emergency_control[7].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus		16	22	6	16	5	75	3500
+#emergency_control[8].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus		18	24	6	16	7	75	3500
+#emergency_control[9].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus		20	26	8	16	14	75	3500
+
+--------------------- Research Configuration -----------------------
+
+Divides research input to get the amount of research points. must be > 0
+#gbv.ResearchPointsDivisor 5
+
+---------------------- Awards and Trophies -------------------------
+
+#awards_trophies.CansofCoke             150
+#awards_trophies.CansofCokeBonus        11000
+#awards_trophies.Reputation             900
+#awards_trophies.TrophyReputationBonus  25000
+#awards_trophies.TrophyDeathBonus	15000
+
+------------------ Winning and Losing Conditions -------------------
+But we don't want any such conditions on the example level!
+1 Total reputation
+2 Balance total
+3 Percentage people your hospital has handled
+4 Percentage people have been cured
+5 Percentage people have been killed
+6 Hospital value
+
+#win_criteria[0].Criteria.MaxMin.Value.Group.Bound	1	1	800		1	0
+#win_criteria[1].Criteria.MaxMin.Value.Group.Bound	2	1	150000	1	0
+#win_criteria[2].Criteria.MaxMin.Value.Group.Bound	3	1	75		1	0
+#win_criteria[3].Criteria.MaxMin.Value.Group.Bound	4	1	90		1	0
+#win_criteria[4].Criteria.MaxMin.Value.Group.Bound	6	1	250000	1	0
+
+#lose_criteria[0].Criteria.MaxMin.Value.Group.Bound	1	0	200		1	450
+#lose_criteria[1].Criteria.MaxMin.Value.Group.Bound	2	0	-20000		2	-10000
+#lose_criteria[2].Criteria.MaxMin.Value.Group.Bound	5	1	20		3	15
+
+--------------------- Competitor Information -----------------------
+
+| Index in the away "computer" | Is that opponent playing? 1 is yes, 0 no | Name |
+#computer[12].Playing.Name 1 SAMMY
+#computer[13].Playing.Name 1 JOHN
+#computer[14].Playing.Name 1 SOPHIE
