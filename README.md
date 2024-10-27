@@ -36,7 +36,7 @@
 
 | Operating System          | Location (typical)                                             |
 |---------------------------|----------------------------------------------------------------|
-| Linux / macOS             | `${XDG_CONFIG_HOME}/CorsixTH/` or `~/.config/CorsixTH/`        |
+| Linux / macOS             | `${XDG_CONFIG_HOME}/CorsixTH/`, usually `~/.config/CorsixTH/`        |
 | Linux (Flatpak)           | `~/.var/app/com.corsixth.corsixth/config/CorsixTH/`            |
 | Linux (snap)              | `~/snap/corsix-th/current/.config/CorsixTH/`                   |
 | Windows                   | `$(APPDATA)\CorsixTH\`                                         |
