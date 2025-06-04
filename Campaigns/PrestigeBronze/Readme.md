@@ -20,5 +20,5 @@ Licenced CC4 2025, "tobylane"
 - PrestigeBronzeTwelve.level
 
 #### Screenshots
-![Level briefing](/Levelbriefing.png "The introduction message on each level")  
-![Completion](/Completion.png "The final fax message on winning the final level")
+![Level briefing](/Campaigns/PrestigeBronze/Levelbriefing.png "The introduction message on each level")  
+![Completion](/Campaigns/PrestigeBronze/Completion.png "The final fax message on winning the final level")
