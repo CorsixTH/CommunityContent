@@ -1,0 +1,32 @@
+Prestige - Bronze 7 is freely distributed under the following terms:
+Copyright (C) 2024 tobylane
+
+This work is licensed under a Creative Commons Attribution 4.0 International License - https://creativecommons.org/licenses/by/4.0/
+---------------------- General Information -------------------------
+%Name = "Prestige - Bronze L7"
+%MapFile = "LEVEL.L7"
+
+%LevelBriefing = "Beaten the original campaign and looking for something harder? We've added more goals.
+
+You must get your reputation to 800, and your average staff and patient happiness above 70%."
+
+%LevelDebriefing = "Nice one! Keep chugging on!"
+
+#overlay.difficulty.level_number = hard 7
+
+------------------ Winning and Losing Conditions -------------------
+1 Total reputation
+2 Balance total
+3 Percentage people your hospital has handled
+4 Count of cured patients
+5 Percentage people have been killed
+6 Hospital value
+7 Staff happiness
+8 Patient happiness
+
+#win_criteria[10].Criteria.MaxMin.Value.Group.Bound	1	1	800	1	625
+#win_criteria[11].Criteria.MaxMin.Value.Group.Bound	7	1	70	1	50
+#win_criteria[12].Criteria.MaxMin.Value.Group.Bound	8	1	70	1	50
+
+#lose_criteria[10].Criteria.MaxMin.Value.Group.Bound	7	0	20 4 50
+#lose_criteria[11].Criteria.MaxMin.Value.Group.Bound	8	0	20 5	50
