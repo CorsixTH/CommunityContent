@@ -1,0 +1,22 @@
+name = "Prestige - Bronze"
+
+description = "Play through the original campaign, with additional goals"
+
+movie = true
+
+levels = {
+  "PrestigeBronzeOne.level",
+  "PrestigeBronzeTwo.level",
+  "PrestigeBronzeThree.level",
+  "PrestigeBronzeFour.level",
+  "PrestigeBronzeFive.level",
+  "PrestigeBronzeSix.level",
+  "PrestigeBronzeSeven.level",
+  "PrestigeBronzeEight.level",
+  "PrestigeBronzeNine.level",
+  "PrestigeBronzeTen.level",
+  "PrestigeBronzeEleven.level",
+  "PrestigeBronzeTwelve.level",
+}
+
+winning_text = "Congratulations! You have successfully completed all the levels on Prestige Bronze difficulty!."
