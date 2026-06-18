@@ -1,0 +1,185 @@
+Spaces - Shelly Bay is freely distributed under the following terms:
+Copyright (C) 2026 "Blais"
+
+This work is licensed under a Creative Commons Attribution 4.0 International License - https://creativecommons.org/licenses/by/4.0/
+
+%Name = "Shelly Bay"
+%MapFile = "ShellyBay.map"
+
+%LevelBriefing = "LUX IT UP
+
+Welcome to Shelly Bay. This used to be a popular getaway for weekenders, but has now been abandoned 
+for a while. Fix these old empty shops and restaurants up and create 
+a profitable hospital megaplex. Use this oppertunity to show off your money-making skills, you are 
+starting with no more than $100 to your name and a loyal skilled researcher from the previous job to get you started. 
+
+Good luck, you might need it."
+
+%LevelDebriefing = "You did it! Impressive. Move on to your next location?"
+
+#town.StartCash.InterestRate 100 1700
+
+#gbv.LandCostPerTile 110
+
+-------------------- Disease Configuration -------------------------
+
+#gbv.StartRating 85 
+
+#expertise[1].Known.RschReqd 1 0 GENERAL_PRACTICE
+#expertise[2].Known.RschReqd.MaxDiagDiff 1 40000 500 BLOATY_HEAD
+#expertise[3].Known.RschReqd.MaxDiagDiff 0 40000 150 HAIRYITUS
+#expertise[4].Known.RschReqd.MaxDiagDiff 0 60000 150 ELVIS
+#expertise[5].Known.RschReqd.MaxDiagDiff 0 80000 150 INVIS
+#expertise[6].Known.RschReqd.MaxDiagDiff 0 60000 750 RADIATION
+#expertise[7].Known.RschReqd.MaxDiagDiff 1 40000 150 SLACK_TONGUE
+#expertise[8].Known.RschReqd.MaxDiagDiff 0 70000 350 ALIEN
+#expertise[9].Known.RschReqd.MaxDiagDiff 0 20000 100 BROKEN_BONES
+#expertise[10].Known.RschReqd.MaxDiagDiff 0 40000 150 BALDNESS
+#expertise[11].Known.RschReqd.MaxDiagDiff 0 40000 500 DISCRETE_ITCHING
+#expertise[12].Known.RschReqd.MaxDiagDiff 0 50000 450 JELLYITUS
+#expertise[13].Known.RschReqd.MaxDiagDiff 0 40000 500 SLEEPING_ILLNESS
+#expertise[14].Known.RschReqd.MaxDiagDiff 0 30000 300 PREGNANT
+#expertise[15].Known.RschReqd.MaxDiagDiff 0 40000 250 TRANSPARENCY
+#expertise[16].Known.RschReqd.MaxDiagDiff 1 20000 250 UNCOMMON_COLD
+#expertise[17].Known.RschReqd.MaxDiagDiff 0 90000 750 BROKEN_WIND
+#expertise[18].Known.RschReqd.MaxDiagDiff 0 70000 250 SPARE_RIBS
+#expertise[19].Known.RschReqd.MaxDiagDiff 0 60000 500 KIDNEY_BEANS
+#expertise[20].Known.RschReqd.MaxDiagDiff 0 30000 500 BROKEN_HEART
+#expertise[21].Known.RschReqd.MaxDiagDiff 0 40000 600 RUPTURED_NODULES
+#expertise[22].Known.RschReqd.MaxDiagDiff 0 40000 250 MULTIPLE_TV_PERSONALITIES
+#expertise[23].Known.RschReqd.MaxDiagDiff 0 60000 250 INFECTIOUS_LAUGHTER
+#expertise[24].Known.RschReqd.MaxDiagDiff 0 80000 500 CORRUGATED_ANKLES
+#expertise[25].Known.RschReqd.MaxDiagDiff 0 50000 600 CHRONIC_NOSEHAIR
+#expertise[26].Known.RschReqd.MaxDiagDiff 0 70000 300 3RD_DEGREE_SIDEBURNS
+#expertise[27].Known.RschReqd.MaxDiagDiff 1 40000 300 FAKE_BLOOD
+#expertise[28].Known.RschReqd.MaxDiagDiff 0 40000 500 GASTRIC_EJECTIONS
+#expertise[29].Known.RschReqd.MaxDiagDiff 0 40000 750 THE_SQUITS
+#expertise[30].Known.RschReqd.MaxDiagDiff 0 50000 700 IRON_LUNGS
+#expertise[31].Known.RschReqd.MaxDiagDiff 0 80000 750 SWEATY_PALMS
+#expertise[32].Known.RschReqd.MaxDiagDiff 0 40000 500 HEAPED_PILES
+#expertise[33].Known.RschReqd.MaxDiagDiff 0 30000 750 GUT_ROT
+#expertise[34].Known.RschReqd.MaxDiagDiff 0 20000 500 GOLF_STONES
+#expertise[35].Known.RschReqd.MaxDiagDiff 0 60000 500 UNEXPECTED_SWELLING
+#expertise[36].Known.RschReqd 0 40000 I_D_SCANNER             DIAGNOSIS
+#expertise[37].Known.RschReqd 1 50000 I_D_BLOOD_MACHINE       DIAGNOSIS
+#expertise[38].Known.RschReqd 0 20000 I_D_CARDIO              DIAGNOSIS
+#expertise[39].Known.RschReqd 0 30000 I_D_XRAY                DIAGNOSIS
+#expertise[40].Known.RschReqd 0 60000 I_D_ULTRASCAN           DIAGNOSIS
+#expertise[41].Known.RschReqd 1 20000 I_D_STANDARD            DIAGNOSIS
+#expertise[42].Known.RschReqd 1 20000 I_D_WARD                DIAGNOSIS
+#expertise[43].Known.RschReqd 1 20000 I_D_SHRINK              DIAGNOSIS
+
+#objects[9].StartAvail.StartStrength.AvailableForLevel 0 8 1 Inflator Machine
+#objects[13].StartAvail.StartStrength.AvailableForLevel 0 13 1 Cardiogram
+#objects[14].StartAvail.StartStrength.AvailableForLevel 0 12 1 Scanner
+#objects[22].StartAvail.StartStrength.AvailableForLevel 0 9 1 Ultrascan
+#objects[23].StartAvail.StartStrength.AvailableForLevel 0 7 0 DNA Restorer
+#objects[24].StartAvail.StartStrength.AvailableForLevel 0 11 1 Cast Remover
+#objects[25].StartAvail.StartStrength.AvailableForLevel 0 8 1 Hair restorer
+#objects[26].StartAvail.StartStrength.AvailableForLevel 0 10 1 Slicer for slack tongues
+#objects[27].StartAvail.StartStrength.AvailableForLevel 0 12 0 X-Ray
+#objects[30].StartAvail.StartStrength.AvailableForLevel 1 12 1 Operating Table
+#objects[37].StartAvail.StartStrength.AvailableForLevel 1 0 1 Projector
+#objects[40].StartAvail.WhenAvail.AvailableForLevel	0 0 1 Research Computer
+#objects[41].StartAvail.WhenAvail.AvailableForLevel	0 0 1 Chemical Mixer 
+#objects[42].StartAvail.StartStrength.AvailableForLevel 1 10 1 Blood Machine
+#objects[46].StartAvail.StartStrength.AvailableForLevel 0 8 1 Electrolysis Machine
+#objects[47].StartAvail.StartStrength.AvailableForLevel 0 7 1 Jellyitus Moulding Machine
+#objects[54].StartAvail.StartStrength.AvailableForLevel 0 10 1 Decontamination Shower
+#objects[55].StartAvail.StartStrength.AvailableForLevel 1 10 1 Autopsy Research Machine
+#objects[57].StartAvail.WhenAvail.AvailableForLevel	1 0 1 Video Game
+
+#visuals[0]  1 I_BLOATY_HEAD
+#visuals[1]  1 I_HAIRYITUS
+#visuals[2]  1 I_ELVIS
+#visuals[3]  1 I_INVIS
+#visuals[4]  1 I_RADIATION
+#visuals[5]  1 I_SLACK_TONGUE
+#visuals[6]  0 I_ALIEN
+#visuals[7]  1 I_BROKEN_BONES
+#visuals[8]  1 I_BALDNESS
+#visuals[9]  1 I_DISCRETE_ITCHING
+#visuals[10] 1 I_JELLYITUS
+#visuals[11] 1 I_SLEEPING_ILLNESS
+#visuals[12] 1 I_PREGNANT
+#visuals[13] 1 I_TRANSPARENCY
+#non_visuals[0] 1 I_UNCOMMON_COLD
+#non_visuals[1] 1 I_BROKEN_WIND
+#non_visuals[2] 1 I_SPARE_RIBS
+#non_visuals[3] 1 I_KIDNEY_BEANS
+#non_visuals[4] 1 I_BROKEN_HEART
+#non_visuals[5] 1 I_RUPTURED_NODULES
+#non_visuals[6] 1 I_MULTIPLE_TV_PERSONALITIES
+#non_visuals[7] 1 I_INFECTIOUS_LAUGHTER
+#non_visuals[8] 1 I_CORRUGATED_ANKLES
+#non_visuals[9] 1 I_CHRONIC_NOSEHAIR
+#non_visuals[10] 1 I_3RD_DEGREE_SIDEBURNS
+#non_visuals[11] 1 I_FAKE_BLOOD
+#non_visuals[12] 1 I_GASTRIC_EJECTIONS
+#non_visuals[13] 1 I_THE_SQUITS
+#non_visuals[14] 1 I_IRON_LUNGS
+#non_visuals[15] 1 I_SWEATY_PALMS
+#non_visuals[16] 1 I_HEAPED_PILES
+#non_visuals[17] 1 I_GUT_ROT
+#non_visuals[18] 1 I_GOLF_STONES
+#non_visuals[19] 1 I_UNEXPECTED_SWELLING
+
+---------------------- Staff Configuration -------------------------
+
+#staff_levels[0].Month.Nurses.Doctors.Handymen.Receptionists.ShrkRate.SurgRate.RschRate.ConsRate.JrRate 0 8 10 6 4 10 10 10 10 2
+
+#staff[0].MinSalary 80
+#staff[1].MinSalary 90
+#staff[2].MinSalary 40
+#staff[3].MinSalary 30
+
+#gbv.SalaryAdd[3] -30
+#gbv.SalaryAdd[4] 30
+#gbv.SalaryAdd[5] 40
+#gbv.SalaryAdd[6] 30
+#gbv.SalaryAdd[7] 100
+#gbv.SalaryAdd[8] 20
+
+#gbv.SalaryAbilityDivisor 10
+
+#gbv.TrainingRate         40
+#gbv.AbilityThreshold[0]  75
+#gbv.AbilityThreshold[1]  60
+#gbv.AbilityThreshold[2]  45
+#gbv.TrainingValue[0]     10
+#gbv.TrainingValue[1]     15
+#gbv.TrainingValue[2]     20
+
+--------------------- Research Configuration -----------------------
+
+#gbv.ResearchPointsDivisor 5
+
+---------------------- Awards and Trophies -------------------------
+
+#awards_trophies.CansofCoke             200
+#awards_trophies.CansofCokeBonus        10000
+#awards_trophies.Reputation             850
+#awards_trophies.TrophyReputationBonus  20000
+
+------------------ Winning and Losing Conditions -------------------
+
+#win_criteria[0].Criteria.MaxMin.Value.Group.Bound 2 1 404040 1 0
+#win_criteria[0].Criteria.MaxMin.Value.Group.Bound 4 1 1040 1 0
+#win_criteria[1].Criteria.MaxMin.Value.Group.Bound 6 1 404040 1 0
+
+#lose_criteria[1].Criteria.MaxMin.Value.Group.Bound 5 1 10 1 0
+
+
+--------------------- Competitor Information -----------------------
+
+#computer[0].Skill.StaffLevels.Luck.Speed.Comfort.GuessAt.Playing		5	5	3	40	8	75	1	ORAC
+#computer[1].Skill.StaffLevels.Luck.Speed.Comfort.GuessAt.Playing		3	5	2	60	5	75	1	COLOSSUS
+#computer[11].Skill.StaffLevels.Luck.Speed.Comfort.GuessAt.Playing		5	5	3	40	8	75	1	JAYNE
+
+----------------------- Emergency Control --------------------------
+
+#emergency_control[0].Mean.Variance 180 40
+
+-------------------------- Start Staff -----------------------------
+
+#start_staff[1].Doctor.Researcher.Consultant.Skill 1 1 1 100

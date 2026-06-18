@@ -1,0 +1,16 @@
+name = "Spaces"
+
+description = "Ready for some advanced theme hospitalling? *cough, cough* You better be: 8 new, unique levels await. // | Created by Blais // | With and for CorsixTH 0.61"
+
+levels = {
+  "Pool.level",
+  "Roadsy.level",
+  "Avenue.level",
+  "Coverup.level",
+  "ShellyBay.level",
+  "Pressure.level",
+  "City.level",
+  "TwoDoors.level",
+}
+
+winning_text = "You did it, congrats! Now go on and leave your feedback with the author, I'm sure he'll appreciate it."

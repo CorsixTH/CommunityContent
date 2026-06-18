@@ -1,0 +1,221 @@
+Spaces - Avenue is freely distributed under the following terms:
+Copyright (C) 2026 "Blais"
+
+This work is licensed under a Creative Commons Attribution 4.0 International License - https://creativecommons.org/licenses/by/4.0/
+
+%Name = "Avenue"
+%MapFile = "Avenue.map"
+
+%LevelBriefing = "SCALPEL AVENUE
+
+Welcome to your first mission. This won't be easy, trust me, so pause the game and read carefully.
+
+a.) There's a shortage of doctors to hire here, luckily I managed to scout a couple of pros for you. 
+Make sure you keep them happy and running.
+
+b.) Focus on creating a surgical wing; a little birdy told me buttcheek implants are a booming trend in this region.
+
+c.) Don't worry too much about reputation, your focus needs to be on curing as many people as you can with this limited space, and 
+making a big profit.
+
+Good luck."
+
+%LevelDebriefing = "Impressive! You managed to do a whole lot with so little. Ready for your next challenge? Say your goodbyes here, 
+pack some Vicodin and diapers and let's move on."
+
+#town.StartCash.InterestRate 16000 1100
+
+#gbv.HoldVisualMonths 5
+#gbv.LandCostPerTile 60
+
+-------------------- Disease Configuration -------------------------
+
+#gbv.StartRating 80 
+
+#expertise[1].Known.RschReqd 1 0 GENERAL_PRACTICE
+#expertise[2].Known.RschReqd.MaxDiagDiff 0 40000 500 BLOATY_HEAD
+#expertise[3].Known.RschReqd.MaxDiagDiff 0 40000 150 HAIRYITUS
+#expertise[4].Known.RschReqd.MaxDiagDiff 1 60000 150 ELVIS
+#expertise[5].Known.RschReqd.MaxDiagDiff 0 60000 150 INVIS
+#expertise[6].Known.RschReqd.MaxDiagDiff 1 60000 750 RADIATION
+#expertise[7].Known.RschReqd.MaxDiagDiff 0 40000 150 SLACK_TONGUE
+#expertise[8].Known.RschReqd.MaxDiagDiff 0 60000 350 ALIEN
+#expertise[9].Known.RschReqd.MaxDiagDiff 1 20000 100 BROKEN_BONES
+#expertise[10].Known.RschReqd.MaxDiagDiff 1 40000 150 BALDNESS
+#expertise[11].Known.RschReqd.MaxDiagDiff 0 40000 500 DISCRETE_ITCHING
+#expertise[12].Known.RschReqd.MaxDiagDiff 0 40000 450 JELLYITUS
+#expertise[13].Known.RschReqd.MaxDiagDiff 1 40000 500 SLEEPING_ILLNESS
+#expertise[14].Known.RschReqd.MaxDiagDiff 1 30000 300 PREGNANT
+#expertise[15].Known.RschReqd.MaxDiagDiff 0 40000 250 TRANSPARENCY
+#expertise[16].Known.RschReqd.MaxDiagDiff 1 20000 250 UNCOMMON_COLD
+#expertise[17].Known.RschReqd.MaxDiagDiff 0 60000 750 BROKEN_WIND
+#expertise[18].Known.RschReqd.MaxDiagDiff 1 20000 250 SPARE_RIBS
+#expertise[19].Known.RschReqd.MaxDiagDiff 0 20000 500 KIDNEY_BEANS
+#expertise[20].Known.RschReqd.MaxDiagDiff 1 20000 500 BROKEN_HEART
+#expertise[21].Known.RschReqd.MaxDiagDiff 1 20000 600 RUPTURED_NODULES
+#expertise[22].Known.RschReqd.MaxDiagDiff 1 40000 250 MULTIPLE_TV_PERSONALITIES
+#expertise[23].Known.RschReqd.MaxDiagDiff 1 60000 250 INFECTIOUS_LAUGHTER
+#expertise[24].Known.RschReqd.MaxDiagDiff 0 40000 500 CORRUGATED_ANKLES
+#expertise[25].Known.RschReqd.MaxDiagDiff 1 40000 600 CHRONIC_NOSEHAIR
+#expertise[26].Known.RschReqd.MaxDiagDiff 0 40000 300 3RD_DEGREE_SIDEBURNS
+#expertise[27].Known.RschReqd.MaxDiagDiff 1 40000 300 FAKE_BLOOD
+#expertise[28].Known.RschReqd.MaxDiagDiff 0 40000 500 GASTRIC_EJECTIONS
+#expertise[29].Known.RschReqd.MaxDiagDiff 1 20000 750 THE_SQUITS
+#expertise[30].Known.RschReqd.MaxDiagDiff 1 20000 700 IRON_LUNGS
+#expertise[31].Known.RschReqd.MaxDiagDiff 1 40000 750 SWEATY_PALMS
+#expertise[32].Known.RschReqd.MaxDiagDiff 1 20000 500 HEAPED_PILES
+#expertise[33].Known.RschReqd.MaxDiagDiff 1 20000 750 GUT_ROT
+#expertise[34].Known.RschReqd.MaxDiagDiff 0 20000 500 GOLF_STONES
+#expertise[35].Known.RschReqd.MaxDiagDiff 1 20000 500 UNEXPECTED_SWELLING
+#expertise[36].Known.RschReqd 0 40000 I_D_SCANNER             DIAGNOSIS
+#expertise[37].Known.RschReqd 0 50000 I_D_BLOOD_MACHINE       DIAGNOSIS
+#expertise[38].Known.RschReqd 0 20000 I_D_CARDIO              DIAGNOSIS
+#expertise[39].Known.RschReqd 1 30000 I_D_XRAY                DIAGNOSIS
+#expertise[40].Known.RschReqd 0 60000 I_D_ULTRASCAN           DIAGNOSIS
+#expertise[41].Known.RschReqd 1 20000 I_D_STANDARD            DIAGNOSIS
+#expertise[42].Known.RschReqd 1 20000 I_D_WARD                DIAGNOSIS
+#expertise[43].Known.RschReqd 1 20000 I_D_SHRINK              DIAGNOSIS
+
+#objects[9].StartAvail.StartStrength.AvailableForLevel 0 8 0 Inflator Machine
+#objects[13].StartAvail.StartStrength.AvailableForLevel 1 13 1 Cardiogram
+#objects[14].StartAvail.StartStrength.AvailableForLevel 0 12 1 Scanner
+#objects[22].StartAvail.StartStrength.AvailableForLevel 0 9 1 Ultrascan
+#objects[23].StartAvail.StartStrength.AvailableForLevel 0 7 0 DNA Restorer
+#objects[24].StartAvail.StartStrength.AvailableForLevel 0 11 1 Cast Remover
+#objects[25].StartAvail.StartStrength.AvailableForLevel 1 8 1 Hair restorer
+#objects[26].StartAvail.StartStrength.AvailableForLevel 0 10 0 Slicer for slack tongues
+#objects[27].StartAvail.StartStrength.AvailableForLevel 0 12 1 X-Ray
+#objects[30].StartAvail.StartStrength.AvailableForLevel 1 12 1 Operating Table
+#objects[37].StartAvail.StartStrength.AvailableForLevel 1 0 1 Projector
+#objects[42].StartAvail.StartStrength.AvailableForLevel 0 10 1 Blood Machine
+#objects[46].StartAvail.StartStrength.AvailableForLevel 0 8 0 Electrolysis Machine
+#objects[47].StartAvail.StartStrength.AvailableForLevel 0 7 0 Jellyitus Moulding Machine
+#objects[54].StartAvail.StartStrength.AvailableForLevel 0 10 0 Decontamination Shower
+#objects[55].StartAvail.StartStrength.AvailableForLevel 1 10 1 Autopsy Research Machine
+
+#visuals[0]  0 I_BLOATY_HEAD
+#visuals[1]  0 I_HAIRYITUS
+#visuals[2]  1 I_ELVIS
+#visuals[3]  1 I_INVIS
+#visuals[4]  0 I_RADIATION
+#visuals[5]  0 I_SLACK_TONGUE
+#visuals[6]  0 I_ALIEN
+#visuals[7]  1 I_BROKEN_BONES
+#visuals[8]  1 I_BALDNESS
+#visuals[9]  1 I_DISCRETE_ITCHING
+#visuals[10] 0 I_JELLYITUS
+#visuals[11] 1 I_SLEEPING_ILLNESS
+#visuals[12] 1 I_PREGNANT
+#visuals[13] 1 I_TRANSPARENCY
+#non_visuals[0] 1 I_UNCOMMON_COLD
+#non_visuals[1] 1 I_BROKEN_WIND
+#non_visuals[2] 1 I_SPARE_RIBS
+#non_visuals[3] 1 I_KIDNEY_BEANS
+#non_visuals[4] 1 I_BROKEN_HEART
+#non_visuals[5] 1 I_RUPTURED_NODULES
+#non_visuals[6] 1 I_MULTIPLE_TV_PERSONALITIES
+#non_visuals[7] 1 I_INFECTIOUS_LAUGHTER
+#non_visuals[8] 1 I_CORRUGATED_ANKLES
+#non_visuals[9] 1 I_CHRONIC_NOSEHAIR
+#non_visuals[10] 1 I_3RD_DEGREE_SIDEBURNS
+#non_visuals[11] 1 I_FAKE_BLOOD
+#non_visuals[12] 1 I_GASTRIC_EJECTIONS
+#non_visuals[13] 1 I_THE_SQUITS
+#non_visuals[14] 1 I_IRON_LUNGS
+#non_visuals[15] 1 I_SWEATY_PALMS
+#non_visuals[16] 1 I_HEAPED_PILES
+#non_visuals[17] 1 I_GUT_ROT
+#non_visuals[18] 1 I_GOLF_STONES
+#non_visuals[19] 1 I_UNEXPECTED_SWELLING
+
+---------------------- Staff Configuration -------------------------
+
+#staff_levels[0].Month.Nurses.Doctors.Handymen.Receptionists.ShrkRate.SurgRate.RschRate.ConsRate.JrRate 0 1 0 2 8 2 0 0 0 5
+#staff_levels[1].Month.Nurses.Doctors.Handymen.Receptionists.ShrkRate.SurgRate.RschRate.ConsRate.JrRate 6 2 3 5 3 1 2 3 4 5
+#staff_levels[2].Month.Nurses.Doctors.Handymen.Receptionists.ShrkRate.SurgRate.RschRate.ConsRate.JrRate 8 3 1 3 4 2 0 4 0 5
+#staff_levels[3].Month.Nurses.Doctors.Handymen.Receptionists.ShrkRate.SurgRate.RschRate.ConsRate.JrRate 12 2 2 4 3 0 10 0 0 2
+#staff_levels[3].Month.Nurses.Doctors.Handymen.Receptionists.ShrkRate.SurgRate.RschRate.ConsRate.JrRate 18 4 3 8 4 8 8 8 2 2
+#staff_levels[3].Month.Nurses.Doctors.Handymen.Receptionists.ShrkRate.SurgRate.RschRate.ConsRate.JrRate 24 6 4 7 2 9 9 9 2 2
+
+#staff[0].MinSalary 70
+#staff[1].MinSalary 90
+#staff[2].MinSalary 30
+#staff[3].MinSalary 30
+
+#gbv.SalaryAdd[3] -30
+#gbv.SalaryAdd[4] 20
+#gbv.SalaryAdd[5] 40
+#gbv.SalaryAdd[6] 20
+#gbv.SalaryAdd[7] 200
+#gbv.SalaryAdd[8] 30
+
+#gbv.SalaryAbilityDivisor 8
+
+#gbv.TrainingRate         40
+#gbv.AbilityThreshold[0]  75
+#gbv.AbilityThreshold[1]  60
+#gbv.AbilityThreshold[2]  45
+#gbv.TrainingValue[0]     10
+#gbv.TrainingValue[1]     15
+#gbv.TrainingValue[2]     20
+
+--------------------- Research Configuration -----------------------
+
+#gbv.ResearchPointsDivisor 4
+
+---------------------- Awards and Trophies -------------------------
+
+#awards_trophies.CansofCoke             200
+#awards_trophies.CansofCokeBonus        10000
+#awards_trophies.Reputation             850
+#awards_trophies.TrophyReputationBonus  20000
+
+------------------ Winning and Losing Conditions -------------------
+
+#win_criteria[0].Criteria.MaxMin.Value.Group.Bound	2	1	200000	1	0
+#win_criteria[1].Criteria.MaxMin.Value.Group.Bound	4	1	600	1	0
+
+#lose_criteria[0].Criteria.MaxMin.Value.Group.Bound	5	1	10	1	0
+
+--------------------- Competitor Information -----------------------
+
+#computer[0].Skill.StaffLevels.Luck.Speed.Comfort.GuessAt.Playing		5	5	3	40	8	75	1	ORAC
+#computer[1].Skill.StaffLevels.Luck.Speed.Comfort.GuessAt.Playing		3	5	2	60	5	75	1	COLOSSUS
+#computer[11].Skill.StaffLevels.Luck.Speed.Comfort.GuessAt.Playing		5	5	3	40	8	75	1	JAYNE
+
+
+----------------------- Emergency Control --------------------------
+
+#emergency_control[0].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 3 4 8 9 18 60 100
+#emergency_control[1].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 6 7 8 9 35 70 200
+#emergency_control[2].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 8 10 8 14 21 80 300
+#emergency_control[3].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 13 16 10 20 19 90 400
+#emergency_control[4].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 17 21 5 20 18 90 500
+#emergency_control[5].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 25 26 10 20 22 100 1000
+#emergency_control[6].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 30 32 10 20 35 80 300
+#emergency_control[7].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 35 40 5 20 15 100 1000
+#emergency_control[8].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 41 42 10 20 19 90 400
+#emergency_control[9].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 43 45 10 20 18 90 500
+#emergency_control[10].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 46 47 10 30 10 90 500
+#emergency_control[11].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 48 49 5 30 10 90 500
+#emergency_control[12].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 50 51 10 30 10 90 500
+#emergency_control[13].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 52 53 2 30 10 90 500
+#emergency_control[14].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 54 55 15 30 10 90 500
+#emergency_control[15].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 56 57 15 30 10 90 500
+#emergency_control[16].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 58 59 1 30 10 90 500
+#emergency_control[17].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 60 70 8 17 21 80 300
+#emergency_control[18].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 71 80 10 30 22 100 1000
+#emergency_control[19].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 81 90 10 30 19 90 400
+#emergency_control[20].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 91 100 20 30 18 90 500
+#emergency_control[21].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 112 118 8 14 10 75 1000
+#emergency_control[22].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 124 130 4 5 21 100 1500
+#emergency_control[23].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 136 142 6 9 10 75 1000
+#emergency_control[24].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 148 156 8 12 22 75 800
+#emergency_control[25].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 162 168 7 11 10 75 1000
+
+----------------------- Start Staff --------------------------
+
+#start_staff[1].Doctor.Surgeon.Doctor.Skill 1 1 1 90
+#start_staff[2].Doctor.Surgeon.Doctor.Skill 1 1 1 70
+#start_staff[3].Doctor.Researcher.Doctor.Skill 1 1 1 80
+#start_staff[4].Doctor.Researcher.Doctor.Skill 1 1 1 70

@@ -1,0 +1,192 @@
+Spaces - Pool Party is freely distributed under the following terms:
+Copyright (C) 2026 "Blais"
+
+This work is licensed under a Creative Commons Attribution 4.0 International License - https://creativecommons.org/licenses/by/4.0/
+
+%Name = "Pool Party"
+%MapFile = "Pool.map"
+
+%LevelBriefing = "POOL PARTY
+
+Welcome to your first mission.
+
+This abandoned pool complex is where you will begin your hospital management career. 
+Turn this limited space into a male beauty clinic. Your main focus will be gluing hair onto bald guys. 
+Make sure to charge accordingly.
+
+You will need to build a GP's office, to check potential clients' credit score. Then you should make use of the Scanner, so you can 
+check for any gold teeth and spare change. Finally you should install the Hair Restorer chair (also known as Fuzzy Gluer). You'll figure out the rest.
+
+Best of luck, make a bunch of shiny scalps hairy again!"
+
+%LevelDebriefing = "Good job! Your clinic really got popular and simply too small - 
+shows you're ready to move onto something more spacious."
+
+#town.StartCash.InterestRate 25000 750
+
+#gbv.HoldVisualMonths		0
+#gbv.HoldVisualPeepCount	0
+
+-------------------- Disease Configuration -------------------------
+
+#gbv.StartRating 100 
+
+#expertise[1].Known.RschReqd 1 0 GENERAL_PRACTICE
+#expertise[2].Known.RschReqd 0 40000 BLOATY_HEAD
+#expertise[3].Known.RschReqd 0 40000 HAIRYITUS
+#expertise[4].Known.RschReqd 0 60000 ELVIS
+#expertise[5].Known.RschReqd 0 60000 INVIS
+#expertise[6].Known.RschReqd 0 60000 RADIATION
+#expertise[7].Known.RschReqd 0 40000 SLACK_TONGUE
+#expertise[8].Known.RschReqd 0 60000 ALIEN
+#expertise[9].Known.RschReqd 0 20000 BROKEN_BONES
+#expertise[10].Known.RschReqd 1 40000 BALDNESS
+#expertise[11].Known.RschReqd 0 40000 DISCRETE_ITCHING
+#expertise[12].Known.RschReqd 0 40000 JELLYITUS
+#expertise[13].Known.RschReqd 0 40000 SLEEPING_ILLNESS
+#expertise[14].Known.RschReqd 0 30000 PREGNANT
+#expertise[15].Known.RschReqd 0 40000 TRANSPARENCY
+#expertise[16].Known.RschReqd 0 20000 UNCOMMON_COLD
+#expertise[17].Known.RschReqd 0 60000 BROKEN_WIND
+#expertise[18].Known.RschReqd 0 20000 SPARE_RIBS
+#expertise[19].Known.RschReqd 0 20000 KIDNEY_BEANS
+#expertise[20].Known.RschReqd 0 20000 BROKEN_HEART
+#expertise[21].Known.RschReqd 0 20000 RUPTURED_NODULES
+#expertise[22].Known.RschReqd 0 40000 MULTIPLE_TV_PERSONALITIES
+#expertise[23].Known.RschReqd 0 60000 INFECTIOUS_LAUGHTER
+#expertise[24].Known.RschReqd 0 40000 CORRUGATED_ANKLES
+#expertise[25].Known.RschReqd 0 40000 CHRONIC_NOSEHAIR
+#expertise[26].Known.RschReqd 0 40000 3RD_DEGREE_SIDEBURNS
+#expertise[27].Known.RschReqd 0 40000 FAKE_BLOOD
+#expertise[28].Known.RschReqd 0 40000 GASTRIC_EJECTIONS
+#expertise[29].Known.RschReqd 0 20000 THE_SQUITS
+#expertise[30].Known.RschReqd 0 20000 IRON_LUNGS
+#expertise[31].Known.RschReqd 0 40000 SWEATY_PALMS
+#expertise[32].Known.RschReqd 0 20000 HEAPED_PILES
+#expertise[33].Known.RschReqd 0 20000 GUT_ROT
+#expertise[34].Known.RschReqd 0 20000 GOLF_STONES
+#expertise[35].Known.RschReqd 0 20000 UNEXPECTED_SWELLING
+#expertise[36].Known.RschReqd 1 40000 I_D_SCANNER             DIAGNOSIS
+#expertise[37].Known.RschReqd 0 50000 I_D_BLOOD_MACHINE       DIAGNOSIS
+#expertise[38].Known.RschReqd 0 20000 I_D_CARDIO              DIAGNOSIS
+#expertise[39].Known.RschReqd 0 30000 I_D_XRAY                DIAGNOSIS
+#expertise[40].Known.RschReqd 0 60000 I_D_ULTRASCAN           DIAGNOSIS
+#expertise[41].Known.RschReqd 0 20000 I_D_STANDARD            DIAGNOSIS
+#expertise[42].Known.RschReqd 0 20000 I_D_WARD                DIAGNOSIS
+#expertise[43].Known.RschReqd 0 20000 I_D_SHRINK              DIAGNOSIS
+
+#objects[9].StartAvail.StartStrength.AvailableForLevel 0 8 0 Inflator Machine
+#objects[13].StartAvail.StartStrength.AvailableForLevel 0 13 0 Cardiogram
+#objects[14].StartAvail.StartStrength.AvailableForLevel 1 12 1 Scanner
+#objects[22].StartAvail.StartStrength.AvailableForLevel 0 9 0 Ultrascan
+#objects[23].StartAvail.StartStrength.AvailableForLevel 0 7 0 DNA Restorer
+#objects[24].StartAvail.StartStrength.AvailableForLevel 0 11 0 Cast Remover
+#objects[25].StartAvail.StartStrength.AvailableForLevel 1 9 1 Hair restorer
+#objects[26].StartAvail.StartStrength.AvailableForLevel 0 10 0 Slicer for slack tongues
+#objects[27].StartAvail.StartStrength.AvailableForLevel 0 12 0 X-Ray
+#objects[30].StartAvail.StartStrength.AvailableForLevel 0 12 0 Operating Table
+#objects[37].StartAvail.StartStrength.AvailableForLevel 0 0 0 Projector
+#objects[42].StartAvail.StartStrength.AvailableForLevel 0 10 0 Blood Machine
+#objects[46].StartAvail.StartStrength.AvailableForLevel 0 8 0 Electrolysis Machine
+#objects[47].StartAvail.StartStrength.AvailableForLevel 0 7 0 Jellyitus Moulding Machine
+#objects[54].StartAvail.StartStrength.AvailableForLevel 0 10 0 Decontamination Shower
+#objects[55].StartAvail.StartStrength.AvailableForLevel 0 10 0 Autopsy Research Machine
+
+#visuals[0]  0 I_BLOATY_HEAD
+#visuals[1]  0 I_HAIRYITUS
+#visuals[2]  0 I_ELVIS
+#visuals[3]  0 I_INVIS
+#visuals[4]  0 I_RADIATION
+#visuals[5]  0 I_SLACK_TONGUE
+#visuals[6]  0 I_ALIEN
+#visuals[7]  0 I_BROKEN_BONES
+#visuals[8]  1 I_BALDNESS
+#visuals[9]  0 I_DISCRETE_ITCHING
+#visuals[10] 0 I_JELLYITUS
+#visuals[11] 0 I_SLEEPING_ILLNESS
+#visuals[12] 0 I_PREGNANT
+#visuals[13] 0 I_TRANSPARENCY
+#non_visuals[0] 0 I_UNCOMMON_COLD
+#non_visuals[1] 0 I_BROKEN_WIND
+#non_visuals[2] 0 I_SPARE_RIBS
+#non_visuals[3] 0 I_KIDNEY_BEANS
+#non_visuals[4] 0 I_BROKEN_HEART
+#non_visuals[5] 0 I_RUPTURED_NODULES
+#non_visuals[6] 0 I_MULTIPLE_TV_PERSONALITIES
+#non_visuals[7] 0 I_INFECTIOUS_LAUGHTER
+#non_visuals[8] 0 I_CORRUGATED_ANKLES
+#non_visuals[9] 0 I_CHRONIC_NOSEHAIR
+#non_visuals[10] 0 I_3RD_DEGREE_SIDEBURNS
+#non_visuals[11] 0 I_FAKE_BLOOD
+#non_visuals[12] 0 I_GASTRIC_EJECTIONS
+#non_visuals[13] 0 I_THE_SQUITS
+#non_visuals[14] 0 I_IRON_LUNGS
+#non_visuals[15] 0 I_SWEATY_PALMS
+#non_visuals[16] 0 I_HEAPED_PILES
+#non_visuals[17] 0 I_GUT_ROT
+#non_visuals[18] 0 I_GOLF_STONES
+#non_visuals[19] 0 I_UNEXPECTED_SWELLING
+
+------------------------ Enable Baldness ---------------------------
+
+#visuals_available[8] 0
+
+---------------------- Staff Configuration -------------------------
+
+#staff_levels[0].Month.Nurses.Doctors.Handymen.Receptionists.ShrkRate.SurgRate.RschRate.ConsRate.JrRate 0 0 3 2 2 0 0 0 0 10
+
+#staff[0].MinSalary 50
+#staff[1].MinSalary 70
+#staff[2].MinSalary 30
+#staff[3].MinSalary 20
+
+#gbv.SalaryAdd[3] -30
+#gbv.SalaryAdd[4] 10
+#gbv.SalaryAdd[5] 20
+#gbv.SalaryAdd[6] 30
+#gbv.SalaryAdd[7] 40
+#gbv.SalaryAdd[8] 50
+
+#gbv.SalaryAbilityDivisor 10
+
+#gbv.TrainingRate         40
+#gbv.AbilityThreshold[0]  75
+#gbv.AbilityThreshold[1]  60
+#gbv.AbilityThreshold[2]  45
+#gbv.TrainingValue[0]     10
+#gbv.TrainingValue[1]     15
+#gbv.TrainingValue[2]     20
+
+--------------------- Research Configuration -----------------------
+
+#gbv.ResearchPointsDivisor 5
+
+---------------------- Awards and Trophies -------------------------
+
+#awards_trophies.CansofCoke             200
+#awards_trophies.CansofCokeBonus        10000
+#awards_trophies.Reputation             850
+#awards_trophies.TrophyReputationBonus  20000
+
+------------------ Winning and Losing Conditions -------------------
+
+#win_criteria[0].Criteria.MaxMin.Value.Group.Bound	4	1	100	1	0
+#win_criteria[1].Criteria.MaxMin.Value.Group.Bound	2	1	150000	1	0
+
+#lose_criteria[0].Criteria.MaxMin.Value.Group.Bound	5	1	25	1	0
+
+
+--------------------- Competitor Information -----------------------
+
+#computer[12].Playing 0
+#computer[13].Playing 0
+#computer[14].Playing 0
+
+----------------------- Quake Control --------------------------
+
+#quake_control[0].StartMonth.EndMonth.Severity 0 30 2
+#quake_control[1].StartMonth.EndMonth.Severity 31 45 4
+#quake_control[2].StartMonth.EndMonth.Severity 46 70 6
+#quake_control[3].StartMonth.EndMonth.Severity 71 121 2
+#quake_control[4].StartMonth.EndMonth.Severity 122 140 6
+#quake_control[5].StartMonth.EndMonth.Severity 160 240 4
