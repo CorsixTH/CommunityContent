@@ -1,0 +1,305 @@
+Copyright (c) 2010 Edvin "Lego3" Linge
+Copryight (c) 2023 Kyan Klock
+
+Example Level Configuration.
+This work is licensed under a Creative Commons Attribution 4.0 International License - https://creativecommons.org/licenses/by/4.0/
+
+Only lines beginning with % or # as explained below will be considered by the game.
+
+Each line beginning with a %-sign is a directive to use when loading the game,
+such as the name of the level and where to find the map file. Available commands:
+- Name: What the level should be called (within quotes)
+- MapFile: The name of the binary map file to load. First the Levels directory of the
+  original game will be searched, and then the Levels directory of CorsixTH.
+- LevelBriefing: The body of text shown before you start a custom scenario,
+  and as first information when you have just started a new level.
+  Everything between the citation marks will get included. If you use new lines:
+  One new line is simply discarded, while two new lines in a row creates
+  a new paragraph. So does the special expression // (legacy from Theme Hospital)
+- LevelDebriefing: Text shown in the fax when you win a level.
+
+Lines that begin with # defines all parameters for the level.
+By default there are no diseases and only some basic rooms are available.
+
+
+---------------------- General Information -------------------------
+%Name = "Hell's Creek"
+%MapFile = "Hell's Creek.map"
+Made by Kyan Klock 2023
+
+Everything within citation marks will be the briefing/debriefing.
+Two new lines creates a new paragraph, but additional new lines in a row are discarded.
+%LevelBriefing = "Hell's Creek - By Kyan Klock 2023 
+//Briefing:
+//Welcome to Hell's Creek. This low budget Hospital has just opened and is competing against the highly sucessful Heaven Town hospital. Fortunately, you have a lot of space to work with as well as qualified personnel. Cure at least 1250 patients (treat 75% of them) and reach a reputation of no less than 800.
+//This town is well known for their baldness and hairyitis outbreaks, so watch out for them, as you can make some quick money that way. Beware of Earthquakes as they're far more dangerous on this side of the coast.
+//Good Luck!"
+
+%LevelDebriefing = "Congratulations! You're the best Hospital Manager in Hell's Creek. This should be enough to make Heaven Town's hospital go bankrupt."
+
+Town properties
+InterestRate is defined as centiprocent to allow for two decimals precision, i.e.
+300 means 3 %
+#town.StartCash.InterestRate 25500 500
+
+-------------------- Disease Configuration -------------------------
+
+When a drug is researched, what effectiveness does it have
+#gbv.StartRating 90 
+
+The following table contains all diagnoses and treatments that shows up in the drug casebook
+in the game. Known specifies whether it should show up from the beginning of the level and
+RschReqd how much research is required to discover the treatment room for the disease, MaxDiagDiff is how hard it is to diagnose (don't apply to diag rooms).
+#expertise[1].ContRate.Known.RschReqd   0  1      0                  GENERAL_PRACTICE
+#expertise[2].ContRate.Known.RschReqd   5  0      40000              BLOATY_HEAD
+#expertise[3].ContRate.Known.RschReqd   5  1      40000              HAIRYITUS
+#expertise[4].ContRate.Known.RschReqd   10  1      60000              ELVIS
+#expertise[5].ContRate.Known.RschReqd   10  1      60000              INVIS
+#expertise[6].ContRate.Known.RschReqd   5  0      60000              RADIATION
+#expertise[7].ContRate.Known.RschReqd   5  0      40000              SLACK_TONGUE
+#expertise[8].ContRate.Known.RschReqd   5  0      60000              ALIEN
+#expertise[9].ContRate.Known.RschReqd   5  0      20000              BROKEN_BONES
+#expertise[10].ContRate.Known.RschReqd  5  1      40000              BALDNESS
+#expertise[11].ContRate.Known.RschReqd  10  0      40000              DISCRETE_ITCHING
+#expertise[12].ContRate.Known.RschReqd  5  0      40000              JELLYITUS
+#expertise[13].ContRate.Known.RschReqd  10  0      40000              SLEEPING_ILLNESS
+#expertise[14].ContRate.Known.RschReqd  0  1      30000              PREGNANT
+#expertise[15].ContRate.Known.RschReqd  10  1      40000              TRANSPARENCY
+#expertise[16].ContRate.Known.RschReqd  75  1      20000              UNCOMMON_COLD
+#expertise[17].ContRate.Known.RschReqd  10  0      60000              BROKEN_WIND
+#expertise[18].ContRate.Known.RschReqd  10  0      20000              SPARE_RIBS
+#expertise[19].ContRate.Known.RschReqd  10  0      20000              KIDNEY_BEANS
+#expertise[20].ContRate.Known.RschReqd  10  0      20000              BROKEN_HEART
+#expertise[21].ContRate.Known.RschReqd  10  0      20000              RUPTURED_NODULES
+#expertise[22].ContRate.Known.RschReqd  25  0      40000              MULTIPLE_TV_PERSONALITIES
+#expertise[23].ContRate.Known.RschReqd  25  0      60000              INFECTIOUS_LAUGHTER
+#expertise[24].ContRate.Known.RschReqd  25  0      40000              CORRUGATED_ANKLES
+#expertise[25].ContRate.Known.RschReqd  25  0      40000              CHRONIC_NOSEHAIR
+#expertise[26].ContRate.Known.RschReqd  25  0      40000              3RD_DEGREE_SIDEBURNS
+#expertise[27].ContRate.Known.RschReqd  25  0      40000              FAKE_BLOOD
+#expertise[28].ContRate.Known.RschReqd  25  0      40000              GASTRIC_EJECTIONS
+#expertise[29].ContRate.Known.RschReqd  25  0      20000              THE_SQUITS
+#expertise[30].ContRate.Known.RschReqd  10  0      20000              IRON_LUNGS
+#expertise[31].ContRate.Known.RschReqd  25  0      40000              SWEATY_PALMS
+#expertise[32].ContRate.Known.RschReqd  10  0      20000              HEAPED_PILES
+#expertise[33].ContRate.Known.RschReqd  25  1      20000              GUT_ROT
+#expertise[34].ContRate.Known.RschReqd  10  0      20000              GOLF_STONES
+#expertise[35].ContRate.Known.RschReqd  10  0      20000              UNEXPECTED_SWELLING
+#expertise[36].Known.RschReqd           0   60000  I_D_SCANNER        DIAGNOSIS
+#expertise[37].Known.RschReqd           1   50000  I_D_BLOOD_MACHINE  DIAGNOSIS
+#expertise[38].Known.RschReqd           1   20000  I_D_CARDIO         DIAGNOSIS
+#expertise[39].Known.RschReqd           0   50000  I_D_XRAY           DIAGNOSIS
+#expertise[40].Known.RschReqd           0   60000  I_D_ULTRASCAN      DIAGNOSIS
+#expertise[41].Known.RschReqd           1   20000  I_D_STANDARD       DIAGNOSIS
+#expertise[42].Known.RschReqd           1   20000  I_D_WARD           DIAGNOSIS
+#expertise[43].Known.RschReqd           1   20000  I_D_SHRINK         DIAGNOSIS
+
+| Objects available | Available from the start | Strength | Available for this level | Comment
+#objects[9].StartAvail.StartStrength.AvailableForLevel 0 8 1 Inflator Machine
+#objects[13].StartAvail.StartStrength.AvailableForLevel 1 13 1 Cardiogram
+#objects[14].StartAvail.StartStrength.AvailableForLevel 0 12 1 Scanner
+#objects[22].StartAvail.StartStrength.AvailableForLevel 0 9 1 Ultrascan
+#objects[23].StartAvail.StartStrength.AvailableForLevel 0 7 1 DNA Restorer
+#objects[24].StartAvail.StartStrength.AvailableForLevel 0 11 1 Cast Remover
+#objects[25].StartAvail.StartStrength.AvailableForLevel 1 8 1 Hair restorer
+#objects[26].StartAvail.StartStrength.AvailableForLevel 0 10 1 Slicer for slack tongues
+#objects[27].StartAvail.StartStrength.AvailableForLevel 0 12 1 X-Ray
+#objects[30].StartAvail.StartStrength.AvailableForLevel 1 12 1 Operating Table
+#objects[37].StartAvail.StartStrength.AvailableForLevel 1 0 1 Projector
+#objects[42].StartAvail.StartStrength.AvailableForLevel 1 10 1 Blood Machine
+#objects[46].StartAvail.StartStrength.AvailableForLevel 1 8 1 Electrolysis Machine
+#objects[47].StartAvail.StartStrength.AvailableForLevel 0 7 1 Jellyitus Moulding Machine
+#objects[54].StartAvail.StartStrength.AvailableForLevel 0 10 1 Decontamination Shower
+#objects[55].StartAvail.StartStrength.AvailableForLevel 1 10 1 Autopsy Research Machine
+
+#objects[40].StartAvail.WhenAvail.AvailableForLevel 0 0 1 Research Computer
+#objects[41].StartAvail.WhenAvail.AvailableForLevel 0 0 1 Chemical Mixer 
+#objects[57].StartAvail.WhenAvail.AvailableForLevel 1 0 1 Video Game
+
+| Diseases available | Value property to be determined | Comment
+#visuals[0]  1 I_BLOATY_HEAD
+#visuals[1]  1 I_HAIRYITUS
+#visuals[2]  1 I_ELVIS
+#visuals[3]  1 I_INVIS
+#visuals[4]  1 I_RADIATION
+#visuals[5]  1 I_SLACK_TONGUE
+#visuals[6]  1 I_ALIEN
+#visuals[7]  1 I_BROKEN_BONES
+#visuals[8]  1 I_BALDNESS
+#visuals[9]  1 I_DISCRETE_ITCHING
+#visuals[10] 1 I_JELLYITUS
+#visuals[11] 1 I_SLEEPING_ILLNESS
+#visuals[12] 1 I_PREGNANT
+#visuals[13] 1 I_TRANSPARENCY
+#non_visuals[0] 1 I_UNCOMMON_COLD
+#non_visuals[1] 1 I_BROKEN_WIND
+#non_visuals[2] 1 I_SPARE_RIBS
+#non_visuals[3] 1 I_KIDNEY_BEANS
+#non_visuals[4] 1 I_BROKEN_HEART
+#non_visuals[5] 1 I_RUPTURED_NODULES
+#non_visuals[6] 1 I_MULTIPLE_TV_PERSONALITIES
+#non_visuals[7] 1 I_INFECTIOUS_LAUGHTER
+#non_visuals[8] 1 I_CORRUGATED_ANKLES
+#non_visuals[9] 1 I_CHRONIC_NOSEHAIR
+#non_visuals[10] 1 I_3RD_DEGREE_SIDEBURNS
+#non_visuals[11] 1 I_FAKE_BLOOD
+#non_visuals[12] 1 I_GASTRIC_EJECTIONS
+#non_visuals[13] 1 I_THE_SQUITS
+#non_visuals[14] 1 I_IRON_LUNGS
+#non_visuals[15] 1 I_SWEATY_PALMS
+#non_visuals[16] 1 I_HEAPED_PILES
+#non_visuals[17] 1 I_GUT_ROT
+#non_visuals[18] 1 I_GOLF_STONES
+#non_visuals[19] 1 I_UNEXPECTED_SWELLING
+
+---------------------- Staff Configuration -------------------------
+
+#start_staff[1].Doctor.Nurse.Handyman.Receptionist.Shrink.Surgeon.Researcher.Junior.Consultant.Skill 1 0 0 0 0 0 0 0 1 100
+
+Each entry states how many staff members of each category are available
+a given month. The number of entries is not fixed.
+| A list | Month it gets active (start at 0) | Each group |
+#staff_levels[0].Month.Nurses.Doctors.Handymen.Receptionists.ShrkRate.SurgRate.RschRate.ConsRate.JrRate 0 5 9 5 3 35 35 50 0 25
+#staff_levels[1].Month.Nurses.Doctors.Handymen.Receptionists.ShrkRate.SurgRate.RschRate.ConsRate.JrRate 6 7 12 7 5 50 50 75 0 50
+#staff_levels[2].Month.Nurses.Doctors.Handymen.Receptionists.ShrkRate.SurgRate.RschRate.ConsRate.JrRate 12 5 9 5 3 35 35 50 0 25
+#staff_levels[3].Month.Nurses.Doctors.Handymen.Receptionists.ShrkRate.SurgRate.RschRate.ConsRate.JrRate 18 7 12 7 5 50 50 75 0 50
+#staff_levels[4].Month.Nurses.Doctors.Handymen.Receptionists.ShrkRate.SurgRate.RschRate.ConsRate.JrRate 24 5 9 5 3 35 35 50 0 25
+#staff_levels[5].Month.Nurses.Doctors.Handymen.Receptionists.ShrkRate.SurgRate.RschRate.ConsRate.JrRate 30 7 12 7 5 50 50 75 0 50
+#staff_levels[6].Month.Nurses.Doctors.Handymen.Receptionists.ShrkRate.SurgRate.RschRate.ConsRate.JrRate 36 5 9 5 3 35 35 50 0 25
+#staff_levels[7].Month.Nurses.Doctors.Handymen.Receptionists.ShrkRate.SurgRate.RschRate.ConsRate.JrRate 42 7 12 7 5 50 50 75 0 50
+#staff_levels[8].Month.Nurses.Doctors.Handymen.Receptionists.ShrkRate.SurgRate.RschRate.ConsRate.JrRate 48 5 9 5 3 35 35 50 0 25
+
+The minimum salary for each staff type
+#staff[0].MinSalary 75 Nurse
+#staff[1].MinSalary 100 Doctor
+#staff[2].MinSalary 35 Handyman
+#staff[3].MinSalary 35 Receptionist
+
+Salary modifiers for different doctor attributes
+#gbv.SalaryAdd[3] -50 Junior
+#gbv.SalaryAdd[4] 50 Doctor
+#gbv.SalaryAdd[5] 75 Surgeon
+#gbv.SalaryAdd[6] 50 Psychiatrist
+#gbv.SalaryAdd[7] 100 Consultant
+#gbv.SalaryAdd[8] 50 Researcher
+
+How much the skill of the doctor adds to the salary. skill * 1000 / divisor
+#gbv.SalaryAbilityDivisor 10
+
+#gbv.TrainingRate         20
+#gbv.AbilityThreshold[0]  60 Surgeon
+#gbv.AbilityThreshold[1]  50 Psychiatrist
+#gbv.AbilityThreshold[2]  40 Researcher
+#gbv.TrainingValue[0]     10 Projector
+#gbv.TrainingValue[1]     10 Skeleton
+#gbv.TrainingValue[2]     10 Bookcase
+
+--------------------- Research Configuration -----------------------
+
+Divides research input to get the amount of research points. must be > 0
+#gbv.ResearchPointsDivisor 5
+
+---------------------- Awards and Trophies -------------------------
+
+#awards_trophies.CansofCoke             200
+#awards_trophies.CansofCokeBonus        5000
+#awards_trophies.Reputation             600
+#awards_trophies.TrophyReputationBonus  15000
+
+------------------ Winning and Losing Conditions -------------------
+1 Total reputation
+2 Balance total
+3 Percentage people your hospital has handled
+4 Percentage people have been cured
+5 Percentage people have been killed
+6 Hospital value
+
+#win_criteria[0].Criteria.MaxMin.Value.Group.Bound 1 1 800 1 525
+#win_criteria[1].Criteria.MaxMin.Value.Group.Bound 3 1 75 1 0
+#win_criteria[2].Criteria.MaxMin.Value.Group.Bound 4 1 1250 1 0
+
+#lose_criteria[0].Criteria.MaxMin.Value.Group.Bound 1 0 500 1 525
+#lose_criteria[1].Criteria.MaxMin.Value.Group.Bound 5 1 200 3 100
+
+--------------------- Competitor Information -----------------------
+| Index in the away "computer" | Is that opponent playing? | 1 is yes, 0 no | Comment |
+#computer[12].Playing 1 CORSIX
+#computer[13].Playing 1 MULTIVAC
+#computer[14].Playing 1 COLOSSUS
+
+----------------------- Emergency Control --------------------------
+#emergency_control[0].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 4 8 8 12 10 70 1000
+Baldness
+#emergency_control[1].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 8 12 8 12 3 70 1000
+Hairyitis
+#emergency_control[2].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 12 16 8 12 10 70 1000
+Baldness
+#emergency_control[3].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 16 20 8 12 3 70 1000
+Hairyitis
+#emergency_control[4].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 20 24 8 12 10 70 1000
+Baldness
+#emergency_control[5].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 24 28 8 12 3 70 1000
+Hairyitis
+#emergency_control[6].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 28 32 8 12 10 70 1000
+Baldness
+#emergency_control[7].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 32 36 10 12 3 70 1000
+Hairyitis
+#emergency_control[8].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 36 40 3 7 5 50 400
+Invisibility
+#emergency_control[9].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 40 44 3 7 15 50 400
+Transparency
+#emergency_control[10].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 44 48 8 12 10 70 1000
+Baldness
+#emergency_control[11].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 48 52 8 12 3 70 1000
+Hairyitis
+#emergency_control[12].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 52 56 8 12 10 70 1000
+Baldness
+#emergency_control[13].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 56 60 8 12 3 70 1000
+Hairyitis
+#emergency_control[14].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 60 64 8 12 10 70 1000
+Baldness
+#emergency_control[15].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 64 68 8 12 3 70 1000
+Hairyitis
+#emergency_control[16].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 68 72 8 12 10 70 1000
+Baldness
+#emergency_control[17].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 72 76 10 12 3 70 1000
+Hairyitis
+#emergency_control[18].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 76 80 3 7 16 50 400
+Uncommon Cold
+#emergency_control[19].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 80 84 3 7 33 50 400
+Gut Rot
+----------------------- Earthquake Control --------------------------
+#quake_control[0].StartMonth.EndMonth.Severity		4	8	3
+#quake_control[1].StartMonth.EndMonth.Severity		8	12	3
+#quake_control[2].StartMonth.EndMonth.Severity		12	16	4
+#quake_control[3].StartMonth.EndMonth.Severity		16	20	4
+#quake_control[4].StartMonth.EndMonth.Severity		20	24	5
+#quake_control[5].StartMonth.EndMonth.Severity		24	28	5
+#quake_control[6].StartMonth.EndMonth.Severity		28	32	6
+#quake_control[7].StartMonth.EndMonth.Severity		32	36	6
+#quake_control[8].StartMonth.EndMonth.Severity		36	40	7
+#quake_control[9].StartMonth.EndMonth.Severity		40	44	7
+#quake_control[10].StartMonth.EndMonth.Severity		44	48	8
+#quake_control[11].StartMonth.EndMonth.Severity		48	52	8
+#quake_control[12].StartMonth.EndMonth.Severity		52	56	7
+#quake_control[13].StartMonth.EndMonth.Severity		56	60	7
+#quake_control[14].StartMonth.EndMonth.Severity		60	64	6
+#quake_control[15].StartMonth.EndMonth.Severity		64	68	6
+#quake_control[16].StartMonth.EndMonth.Severity		68	72	5
+#quake_control[17].StartMonth.EndMonth.Severity		72	76	5
+#quake_control[18].StartMonth.EndMonth.Severity		76	80	4
+#quake_control[19].StartMonth.EndMonth.Severity		80	84	4
+#quake_control[20].StartMonth.EndMonth.Severity		84	88	3
+#quake_control[21].StartMonth.EndMonth.Severity		88	92	3
+#quake_control[22].StartMonth.EndMonth.Severity		92	96	4
+#quake_control[23].StartMonth.EndMonth.Severity		96	100	4
+#quake_control[24].StartMonth.EndMonth.Severity		100	104	5
+#quake_control[25].StartMonth.EndMonth.Severity		104	108	5
+#quake_control[26].StartMonth.EndMonth.Severity		108	112	6
+#quake_control[27].StartMonth.EndMonth.Severity		112	116	6
+#quake_control[28].StartMonth.EndMonth.Severity		116	120	7
+#quake_control[29].StartMonth.EndMonth.Severity		120	124	7
+#quake_control[30].StartMonth.EndMonth.Severity		124	128	8
+#quake_control[31].StartMonth.EndMonth.Severity		128	132	8
+----------------------- Epidemics Control --------------------------
+;No epidemics
