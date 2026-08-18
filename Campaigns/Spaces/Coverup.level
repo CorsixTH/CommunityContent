@@ -1,0 +1,216 @@
+Spaces - Cover Up is freely distributed under the following terms:
+Copyright (C) 2026 "Blais"
+
+This work is licensed under a Creative Commons Attribution 4.0 International License - https://creativecommons.org/licenses/by/4.0/
+
+%Name = "Cover Up"
+%MapFile = "Coverup.map"
+
+%LevelBriefing = "/ TOP SECRET / URGENT TELEGRAM / TOP SECRET /
+
+PATIENTS WITH DNA MUTATIONS ON WAY /STOP/ ARRIVING VIA HELICOPTERS /STOP/ 
+USE ABANDONED AIRPORT HANGARS TO SET UP MEDIC BASE /STOP/ FAILURE TO INVESTIGATE AND FIX ALL PATIENTS WILL 
+RESULT IN CATASTROPHE FOR COUNTRY /STOP/ DO NOT FAIL US /STOP/ PAY STAFF HUSH MONEY /STOP/ RECEPTION IS KEY /STOP/ LT GEN FIELDS
+
+/ TOP SECRET / URGENT TELEGRAM / TOP SECRET /"
+
+%LevelDebriefing = "Thank you for your service. You remember nothing now. Move on."
+
+#town.StartCash.InterestRate 7500 1000
+
+#gbv.LandCostPerTile 90
+
+-------------------- Disease Configuration -------------------------
+
+#gbv.StartRating 100 
+
+#expertise[1].Known.RschReqd 1 0 GENERAL_PRACTICE
+#expertise[2].Known.RschReqd 0 40000 BLOATY_HEAD
+#expertise[3].Known.RschReqd 0 40000 HAIRYITUS
+#expertise[4].Known.RschReqd 0 60000 ELVIS
+#expertise[5].Known.RschReqd 0 60000 INVIS
+#expertise[6].Known.RschReqd 0 60000 RADIATION
+#expertise[7].Known.RschReqd 0 40000 SLACK_TONGUE
+#expertise[8].Known.RschReqd 1 60000 ALIEN
+#expertise[9].Known.RschReqd 0 20000 BROKEN_BONES
+#expertise[10].Known.RschReqd 0 40000 BALDNESS
+#expertise[11].Known.RschReqd 0 40000 DISCRETE_ITCHING
+#expertise[12].Known.RschReqd 0 40000 JELLYITUS
+#expertise[13].Known.RschReqd 0 40000 SLEEPING_ILLNESS
+#expertise[14].Known.RschReqd 0 30000 PREGNANT
+#expertise[15].Known.RschReqd 0 40000 TRANSPARENCY
+#expertise[16].Known.RschReqd 0 20000 UNCOMMON_COLD
+#expertise[17].Known.RschReqd 0 60000 BROKEN_WIND
+#expertise[18].Known.RschReqd 0 20000 SPARE_RIBS
+#expertise[19].Known.RschReqd 0 20000 KIDNEY_BEANS
+#expertise[20].Known.RschReqd 0 20000 BROKEN_HEART
+#expertise[21].Known.RschReqd 0 20000 RUPTURED_NODULES
+#expertise[22].Known.RschReqd 0 40000 MULTIPLE_TV_PERSONALITIES
+#expertise[23].Known.RschReqd 0 60000 INFECTIOUS_LAUGHTER
+#expertise[24].Known.RschReqd 0 40000 CORRUGATED_ANKLES
+#expertise[25].Known.RschReqd 0 40000 CHRONIC_NOSEHAIR
+#expertise[26].Known.RschReqd 0 40000 3RD_DEGREE_SIDEBURNS
+#expertise[27].Known.RschReqd 0 40000 FAKE_BLOOD
+#expertise[28].Known.RschReqd 0 40000 GASTRIC_EJECTIONS
+#expertise[29].Known.RschReqd 0 20000 THE_SQUITS
+#expertise[30].Known.RschReqd 0 20000 IRON_LUNGS
+#expertise[31].Known.RschReqd 0 40000 SWEATY_PALMS
+#expertise[32].Known.RschReqd 0 20000 HEAPED_PILES
+#expertise[33].Known.RschReqd 0 20000 GUT_ROT
+#expertise[34].Known.RschReqd 0 20000 GOLF_STONES
+#expertise[35].Known.RschReqd 0 20000 UNEXPECTED_SWELLING
+#expertise[36].Known.RschReqd 0 40000 I_D_SCANNER             DIAGNOSIS
+#expertise[37].Known.RschReqd 0 50000 I_D_BLOOD_MACHINE       DIAGNOSIS
+#expertise[38].Known.RschReqd 0 20000 I_D_CARDIO              DIAGNOSIS
+#expertise[39].Known.RschReqd 0 30000 I_D_XRAY                DIAGNOSIS
+#expertise[40].Known.RschReqd 0 60000 I_D_ULTRASCAN           DIAGNOSIS
+#expertise[41].Known.RschReqd 1 20000 I_D_STANDARD            DIAGNOSIS
+#expertise[42].Known.RschReqd 0 20000 I_D_WARD                DIAGNOSIS
+#expertise[43].Known.RschReqd 0 20000 I_D_SHRINK              DIAGNOSIS
+
+#objects[9].StartAvail.StartStrength.AvailableForLevel 0 8 0 Inflator Machine
+#objects[13].StartAvail.StartStrength.AvailableForLevel 0 13 0 Cardiogram
+#objects[14].StartAvail.StartStrength.AvailableForLevel 0 12 0 Scanner
+#objects[22].StartAvail.StartStrength.AvailableForLevel 0 9 0 Ultrascan
+#objects[23].StartAvail.StartStrength.AvailableForLevel 1 6 1 DNA Restorer
+#objects[24].StartAvail.StartStrength.AvailableForLevel 0 11 0 Cast Remover
+#objects[25].StartAvail.StartStrength.AvailableForLevel 0 8 0 Hair restorer
+#objects[26].StartAvail.StartStrength.AvailableForLevel 0 10 0 Slicer for slack tongues
+#objects[27].StartAvail.StartStrength.AvailableForLevel 0 12 0 X-Ray
+#objects[30].StartAvail.StartStrength.AvailableForLevel 0 12 0 Operating Table
+#objects[37].StartAvail.StartStrength.AvailableForLevel 0 0 0 Projector
+#objects[42].StartAvail.StartStrength.AvailableForLevel 0 10 0 Blood Machine
+#objects[46].StartAvail.StartStrength.AvailableForLevel 0 8 0 Electrolysis Machine
+#objects[47].StartAvail.StartStrength.AvailableForLevel 0 7 0 Jellyitus Moulding Machine
+#objects[54].StartAvail.StartStrength.AvailableForLevel 0 10 0 Decontamination Shower
+#objects[55].StartAvail.StartStrength.AvailableForLevel 0 10 0 Autopsy Research Machine
+
+#visuals[0]  0 I_BLOATY_HEAD
+#visuals[1]  0 I_HAIRYITUS
+#visuals[2]  0 I_ELVIS
+#visuals[3]  0 I_INVIS
+#visuals[4]  0 I_RADIATION
+#visuals[5]  0 I_SLACK_TONGUE
+#visuals[6]  1 I_ALIEN
+#visuals[7]  0 I_BROKEN_BONES
+#visuals[8]  0 I_BALDNESS
+#visuals[9]  0 I_DISCRETE_ITCHING
+#visuals[10] 0 I_JELLYITUS
+#visuals[11] 0 I_SLEEPING_ILLNESS
+#visuals[12] 0 I_PREGNANT
+#visuals[13] 0 I_TRANSPARENCY
+#non_visuals[0] 0 I_UNCOMMON_COLD
+#non_visuals[1] 0 I_BROKEN_WIND
+#non_visuals[2] 0 I_SPARE_RIBS
+#non_visuals[3] 0 I_KIDNEY_BEANS
+#non_visuals[4] 0 I_BROKEN_HEART
+#non_visuals[5] 0 I_RUPTURED_NODULES
+#non_visuals[6] 0 I_MULTIPLE_TV_PERSONALITIES
+#non_visuals[7] 0 I_INFECTIOUS_LAUGHTER
+#non_visuals[8] 0 I_CORRUGATED_ANKLES
+#non_visuals[9] 0 I_CHRONIC_NOSEHAIR
+#non_visuals[10] 0 I_3RD_DEGREE_SIDEBURNS
+#non_visuals[11] 0 I_FAKE_BLOOD
+#non_visuals[12] 0 I_GASTRIC_EJECTIONS
+#non_visuals[13] 0 I_THE_SQUITS
+#non_visuals[14] 0 I_IRON_LUNGS
+#non_visuals[15] 0 I_SWEATY_PALMS
+#non_visuals[16] 0 I_HEAPED_PILES
+#non_visuals[17] 0 I_GUT_ROT
+#non_visuals[18] 0 I_GOLF_STONES
+#non_visuals[19] 0 I_UNEXPECTED_SWELLING
+
+-------------------- Disable Alien Walk-Ins ------------------------
+
+#visuals_available[6] 980
+
+---------------------- Staff Configuration -------------------------
+
+#staff_levels[0].Month.Nurses.Doctors.Handymen.Receptionists				0 0 13 3 2
+#staff_levels[1].Month.Nurses.Doctors.Handymen.Receptionists                            3 9 1 0 0
+#staff_levels[2].Month.Nurses.Doctors.Handymen.Receptionists                            5 1 3 1 1
+#staff_levels[3].Month.Nurses.Doctors.Handymen.Receptionists                            7 2 4 1 2
+#staff_levels[4].Month.Nurses.Doctors.Handymen.Receptionists                            16 3 9 4 3
+
+#staff[0].MinSalary 120
+#staff[1].MinSalary 120
+#staff[2].MinSalary 100
+#staff[3].MinSalary 100
+
+#gbv.SalaryAdd[3] -10
+#gbv.SalaryAdd[4] 40
+#gbv.SalaryAdd[5] 60
+#gbv.SalaryAdd[6] 40
+#gbv.SalaryAdd[7] 160
+#gbv.SalaryAdd[8] 60
+
+#gbv.SalaryAbilityDivisor 10
+
+#gbv.TrainingRate         40
+#gbv.AbilityThreshold[0]  75
+#gbv.AbilityThreshold[1]  60
+#gbv.AbilityThreshold[2]  45
+#gbv.TrainingValue[0]     10
+#gbv.TrainingValue[1]     15
+#gbv.TrainingValue[2]     20
+
+--------------------- Research Configuration -----------------------
+
+#gbv.ResearchPointsDivisor 5
+
+---------------------- Awards and Trophies -------------------------
+
+#awards_trophies.CansofCoke             200
+#awards_trophies.CansofCokeBonus        10000
+#awards_trophies.Reputation             850
+#awards_trophies.TrophyReputationBonus  20000
+
+------------------ Winning and Losing Conditions -------------------
+
+#win_criteria[0].Criteria.MaxMin.Value.Group.Bound	4	1	99	1	0
+#win_criteria[1].Criteria.MaxMin.Value.Group.Bound	2	1	500000	1	0
+
+
+#lose_criteria[0].Criteria.MaxMin.Value.Group.Bound	5	1	1	1	0
+
+
+--------------------- Competitor Information -----------------------
+
+| Index in the away "computer" | Is that opponent playing? | 1 is yes, 0 no | Comment |
+#computer[0].Playing 0
+#computer[1].Playing 0
+#computer[2].Playing 0
+
+----------------------- Emergency Control --------------------------
+
+#emergency_control[0].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 0 1 3 10 6 100 100
+#emergency_control[1].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 1 2 11 22 6 100 200
+#emergency_control[2].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 2 3 3 10 6 100 200
+#emergency_control[3].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 3 4 4 10 6 100 200
+#emergency_control[4].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 4 5 22 33 6 100 200
+#emergency_control[5].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 5 6 5 30 6 100 500
+#emergency_control[6].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 6 7 6 10 6 100 100
+#emergency_control[7].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 7 8 7 10 6 100 200
+#emergency_control[8].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 8 9 18 30 6 100 200
+#emergency_control[9].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 9 10 4 10 6 100 200
+#emergency_control[10].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 10 11 5 20 6 100 200
+#emergency_control[11].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 11 12 18 30 6 100 500
+#emergency_control[12].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 13 14 8 10 6 100 100
+#emergency_control[13].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 14 15 18 30 6 100 200
+#emergency_control[14].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 15 16 3 10 6 100 200
+#emergency_control[15].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 16 17 25 30 6 100 200
+#emergency_control[16].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 17 18 15 20 6 100 200
+#emergency_control[17].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 18 19 25 30 6 100 500
+#emergency_control[18].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 19 20 5 20 6 100 200
+#emergency_control[19].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 20 21 20 30 6 100 500
+#emergency_control[20].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 21 22 9 10 6 100 100
+#emergency_control[21].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 22 23 15 30 6 100 200
+#emergency_control[22].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 23 24 18 30 6 100 200
+#emergency_control[23].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 24 25 18 30 6 100 200
+#emergency_control[24].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 25 26 1 20 6 100 200
+#emergency_control[25].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 26 27 18 30 6 100 500
+#emergency_control[26].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 27 28 18 30 6 100 200
+#emergency_control[27].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 28 29 18 30 6 100 200
+#emergency_control[28].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 29 30 10 30 6 100 200
+#emergency_control[29].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 30 31 18 20 6 100 200
+#emergency_control[30].StartMonth.EndMonth.Min.Max.Illness.PercWin.Bonus 31 32 18 30 6 100 500
