@@ -14,7 +14,7 @@ efficient hospital.
 
 Best of luck!"
 
-%LevelDebriefing = "Congratulations! You unboxed some new diaseses and created a place of great value. 
+%LevelDebriefing = "Congratulations! You unboxed some new diseases and created a place of great value. 
 Ready for something more challenging?"
 
 #town.StartCash.InterestRate 20000 600
