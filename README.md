@@ -16,7 +16,7 @@
 |--------------------------------------------------|-------------------------------------------------|
 | [Earlytown](Levels/Earlytown/)                   | Matroftt                                        |
 | [Grand Hospital](Levels/GrandHospital/) (remake) | Matroftt                                        |
-| [Heaven Town](Levels/HeavenTown/)                | Lloyd LeJack                                    |
+| [Heaven Town](Levels/HeavenTown/)                | Kyan Klock                                   |
 | [Old Hillside](Levels/OldHillside/)              | Raven "Edgewurth" Penfold                       |
 | [Sandbox](Levels/Sandbox/)                       | Edvin "Lego3" Linge \| Jannikergudingenreklamus |
 | [Tetris](Levels/Tetris/)                         | Matroftt                                        |
